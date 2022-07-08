@@ -1,8 +1,16 @@
-import React from "react"
+import shoppingcart from '../img/shoppingCart.png';
 
+const CartWidget = () => {
+    return (
+        <div className="w-50">
+            <img src={shoppingcart} className="h-70"/>
+        </div>
+    )
+}
 
 const navbar = () => {
     return (
+
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <a className="navbar-brand" href="#">Moto Fest</a>
@@ -33,10 +41,13 @@ const navbar = () => {
                             <a className="nav-link" href="#">Contacto</a>
                         </li>
                     </ul>
+                    
                 </div>
+                <CartWidget/>
             </nav>
         </div>
     )
+
 }
 
-export default navbar
+export default navbar 
