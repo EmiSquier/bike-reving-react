@@ -1,12 +1,11 @@
-import React from "react"
+import shoppingcart from '../img/shoppingCart.png';
 
-
-const cartWidget = () => {
+const CartWidget = () => {
     return (
-        <div>
-            <img src="../../img/shoppcart.svg" alt="carro de compras" />
+        <div className="w-50">
+            <img src={shoppingcart} className=""/>
         </div>
     )
 }
 
-export default cartWidget
+export default CartWidget

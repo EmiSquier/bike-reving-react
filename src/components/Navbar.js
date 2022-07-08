@@ -1,12 +1,4 @@
-import shoppingcart from '../img/shoppingCart.png';
-
-const CartWidget = () => {
-    return (
-        <div className="w-50">
-            <img src={shoppingcart} className="h-70"/>
-        </div>
-    )
-}
+import CartWidget from './CartWidget.js'
 
 const navbar = () => {
     return (
