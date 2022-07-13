@@ -1,26 +1,26 @@
-import {useState} from 'react'
+import { useState } from 'react'
 
-function itemCount() {
+function ItemCount() {
 
-    const array  = useState()
-    console.log(array)
-
-    let count = 0;
-    let stock = document.getElementById('stock').value;
+    const [count, setCount] = useState(0);
+    const stock = 10;
 
     const aumentar = () => {
-
-        if (count < stock) {
-            count++
-        } else {
-            alert('No hay más existencias');
+        if(count < stock){
+            setCount(count + 1)
+        }else{
+            alert('No hay más existencias')
         }
-
     }
 
     const disminuir = () => {
-        count--
+        if(count > 0){
+        setCount(count - 1)
+        }else{
+            alert('No se puede quitar de la nada misma')
+        }
     }
+
 
     return (
         <div>
@@ -32,4 +32,4 @@ function itemCount() {
     )
 }
 
-export default itemCount;
+export default ItemCount;

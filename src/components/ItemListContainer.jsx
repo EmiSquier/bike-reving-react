@@ -1,4 +1,4 @@
-function greetings (props){
+function greetings (){
     return (
         <div>
         <h1>Bienvenidos a Moto Fest!</h1>
