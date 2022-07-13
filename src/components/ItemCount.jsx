@@ -9,7 +9,7 @@ function ItemCount() {
         if(count < stock){
             setCount(count + 1)
         }else{
-            alert('No hay más existencias')
+            alert('Lamentablemente no hay más existencias :(')
         }
     }
 
