@@ -1,12 +1,14 @@
+import { propTypes } from "react-bootstrap/esm/Image";
 import ItemList from "./ItemList";
+import Bienvenida from './Bienvenida';
 
-
-function itemInfo() {
+function itemInfo(props) {
     return (
         <div>
-            <ItemList nombre='Casco' descripcion='Casco de competicion de fibra de carbono' />
-            <ItemList nombre='Campera' descripcion='Campera con protecciones de media estacion' />
-            <ItemList nombre='Guantes' descripcion='Guantes para pista, velocidad en firme' />
+            <Bienvenida nombre='Rider'/>
+            <ItemList producto='Casco' descripcion='Casco de competicion de fibra de carbono' />
+            <ItemList producto='Campera' descripcion='Campera con protecciones de media estacion' />
+            <ItemList producto='Guantes' descripcion='Guantes para pista, velocidad en firme' />
         </div>
     )
 }

@@ -7,7 +7,7 @@ function createItem(props) {
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={AGV_pista} />
       <Card.Body>
-        <Card.Title>{props.nombre}</Card.Title>
+        <Card.Title>{props.producto}</Card.Title>
         <Card.Text>
           {props.descripcion}
         </Card.Text>
