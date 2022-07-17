@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 function ItemCount({initial, stock}) {
 
-    const [count, setCount] = useState(initial);
+    const [count, setCount] = useState(0);
 
     const aumentar = (props) => {
         if(count < stock){
