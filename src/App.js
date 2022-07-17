@@ -13,7 +13,7 @@ function App(props) {
         <ItemListContainer />
         </div>
         <div>
-        <ItemCount />
+        <ItemCount stock={15} initial={0}/>
       </div>
     </div >
   );
