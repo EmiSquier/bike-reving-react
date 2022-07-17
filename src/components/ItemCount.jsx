@@ -1,11 +1,12 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
-function ItemCount() {
+function ItemCount({initial, stock}) {
 
     const [count, setCount] = useState(0);
-    const stock = 10;
+    stock = 16;
+    initial = 0;
 
-    const aumentar = () => {
+    const aumentar = (props) => {
         if(count < stock){
             setCount(count + 1)
         }else{
@@ -13,21 +14,28 @@ function ItemCount() {
         }
     }
 
-    const disminuir = () => {
-        if(count > 0){
+    const disminuir = (props) => {
+        if(count > initial){
         setCount(count - 1)
         }else{
             alert('No se puede quitar de la nada misma')
         }
     }
 
+    function onAdd(props){
+        alert('Se han agregado '+count+' productos al carrito')
+    }
+
 
     return (
         <div>
-            <input type='number' placeholder='Stock' id='stock' /><br></br><br></br>
-            {count}<br></br><br></br>
-            <button onClick={aumentar}>Agregar</button>
-            <button onClick={disminuir}>Disminuir</button>
+            {count}
+            <div>
+        <button onClick={onAdd}>Agregar</button>
+        <button onClick={aumentar}>Aumentar</button>
+        <button onClick={disminuir}>Disminuir</button>
+
+        </div>
         </div>
     )
 }
