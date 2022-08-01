@@ -1,4 +1,6 @@
+import React from 'react';
 import shoppingcart from '../img/shoppingCart.png';
+
 
 const CartWidget = () => {
     return (

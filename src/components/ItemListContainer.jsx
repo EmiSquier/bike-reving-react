@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, setState } from "react";
 import ItemList from './ItemList'
 import Casco from '../img/AGV_pista.jpg'
 import Campera from '../img/campera_alpinestars.jpg'
@@ -18,7 +18,7 @@ const ItemListContainer = () => {
     const task = new Promise((resolve, reject) =>
         setTimeout(() => {
             resolve(productos)
-        }, 3000))
+        }, 5000))
 
     useEffect(() => {
         task

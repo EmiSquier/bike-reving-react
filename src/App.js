@@ -1,6 +1,6 @@
 import './App.css';
+import React from 'react';
 import Navbar from './components/Navbar';
-import { BrowserRouter } from 'react-router-dom';
 import ItemListContainer from './components/ItemListContainer';
 
 function App(props) {
