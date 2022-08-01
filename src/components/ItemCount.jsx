@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function ItemCount({initial, stock}) {
+function ItemCount({initial, stock,}) {
 
     const [count, setCount] = useState(initial);
 
@@ -21,7 +21,11 @@ function ItemCount({initial, stock}) {
     }
 
     function onAdd(props){
+        if(count >=1 ){
         alert('Se han agregado '+count+' productos al carrito')
+        }else{
+            alert('Agregue algún producto')
+        }
     }
 
 

@@ -1,20 +1,12 @@
-import AGV_pista from '../img/AGV_pista.jpg'
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import React from "react";
+import Item from "./Item";
 
-function createItem(props) {
+const ItemList = ({ items }) => {
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={AGV_pista} />
-      <Card.Body>
-        <Card.Title>{props.producto}</Card.Title>
-        <Card.Text>
-          {props.descripcion}
-        </Card.Text>
-        <Button variant="primary" >Agregar al carrito</Button>
-      </Card.Body>
-    </Card>
-  );
+    <div style={{display: 'flex', justifyContent: 'center'}}>
+      {items.map(item => <Item item={item} key={item.id} />)}
+    </div>
+  )
 }
 
-export default createItem;
+export default ItemList
